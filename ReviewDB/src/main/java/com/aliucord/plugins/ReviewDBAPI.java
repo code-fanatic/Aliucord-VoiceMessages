@@ -140,7 +140,7 @@ public class ReviewDBAPI {
                             });
                             thisObject.this$0.getAppActivity().onBackPressed();
 
-                            cf.setResult(Unit.a);
+                            cf.setResult(null);
                         }
                     }));
         } catch (NoSuchMethodException e) {
