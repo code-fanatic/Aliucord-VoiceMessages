@@ -8,13 +8,14 @@ buildscript {
         gradlePluginPortal()
         maven("https://jitpack.io")
         maven("https://maven.aliucord.com/releases")
+        maven("https://maven.aliucord.com/snapshots")
+
 
     }
     dependencies {
         classpath(libs.gradle)
         classpath(libs.jadb)
         classpath(libs.build.gradle)
-        classpath(libs.kotlin.gradle.plugin)
     }
 }
 
@@ -69,16 +70,8 @@ subprojects {
         val compileOnly by configurations
 
 
-        // I HATE YOU SO MUCH KOTLIN, I HATE YOU
-        compileOnly("org.jetbrains.kotlin:kotlin-stdlib:0")
         compileOnly("com.discord:discord:126021")
-        compileOnly("com.aliucord:Aliucord:main-SNAPSHOT")
-    }
-
-    tasks.register("compileDebugKotlin") {
-        doLast {
-            println("die kotlin I hate you")
-        }
+        compileOnly("com.aliucord:Aliucord:2.4.0")
     }
 }
 
