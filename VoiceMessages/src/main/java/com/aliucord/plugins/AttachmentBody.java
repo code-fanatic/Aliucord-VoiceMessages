@@ -9,7 +9,6 @@ public class AttachmentBody {
 
     public AttachmentBody(String filename, int size) {
         files.add(new File(filename, size));
-
     }
 
     public class File {

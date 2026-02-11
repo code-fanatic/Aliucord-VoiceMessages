@@ -28,7 +28,7 @@ public class DiscordAPI {
             var response = req.executeWithBody(GsonUtils.toJson(body));
 
             if (response.statusCode != 200) {
-                throw new RuntimeException("Failed to upload file: " + response.statusCode + " " + response.text());
+                throw new RuntimeException("❌ Upload failed: " + response.statusCode + " " + response.text());
             }
             var jsonResponse = new JSONObject(response.text());
 
@@ -42,7 +42,7 @@ public class DiscordAPI {
             uploadReq.conn.setRequestMethod("PUT");
             var upload = uploadReq.executeWithBody(FilesKt.readBytes(file));
             if (upload.statusCode != 200) {
-                throw new RuntimeException("Failed to upload file: " + upload.statusCode + " " + upload.text());
+                throw new RuntimeException("❌ Upload failed: " + upload.statusCode + " " + upload.text());
             }
             return attachment.getString("upload_filename");
         } catch (IOException | JSONException e) {

@@ -35,7 +35,7 @@ public class WaveFormView extends android.view.View {
 
     public String getWaveForm() {
         var quiet = true;
-        // if sound is too quiet we double it so its shown in waveform
+        // if sound is too quiet, double it so its shown in waveform
         for (int wave : waves) {
             if (wave > 128) {
                 quiet = false;

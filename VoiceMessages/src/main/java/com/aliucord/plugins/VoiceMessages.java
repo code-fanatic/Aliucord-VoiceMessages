@@ -122,7 +122,7 @@ public class VoiceMessages extends Plugin {
                     // check if user moved finger out of button
                     if ( motionEvent.getY() < 0 || motionEvent.getY() > view.getHeight()) {
                         onRecordStop(false,0L);
-                        Utils.showToast("Cancelled recording");
+                        Utils.showToast("❌ Recording Cancelled");
                     }
                     return true;
             }
@@ -149,6 +149,7 @@ public class VoiceMessages extends Plugin {
             viewgroup.addView(recordButton);
             var params = (LinearLayout.LayoutParams) waveFormView.getLayoutParams();
             params.height = DimenUtils.dpToPx(30);
+            params.width = DimenUtils.dpToPx(30);
             params.gravity = Gravity.CENTER;
         });
 
@@ -203,7 +204,7 @@ public class VoiceMessages extends Plugin {
         mediaRecorder.setAudioEncodingBitRate(settings.getInt("audioQuality", 128) * 1024);
         mediaRecorder.setAudioSamplingRate(settings.getBool("highSamplingRate", false) ? 48000 : 44100);
 
-        outputFile = File.createTempFile("audio_record", extension, new File(Constants.BASE_PATH));
+        outputFile = File.createTempFile("voice_", extension, new File(Constants.BASE_PATH));
         outputFile.deleteOnExit();
         mediaRecorder.setOutputFile(outputFile.getAbsolutePath());
 
@@ -260,7 +261,7 @@ public class VoiceMessages extends Plugin {
         var channel = new ChannelWrapper(StoreStream.getChannels().getChannel(channelId));
         var guild = StoreStream.getGuilds().getGuild(channel.getGuildId());
         if (channel.isDM()) {
-            // if channel is dm it causes guild to be null and causes issues
+            // if channel = dm it causes guild to be null and causes issues
             setRecordButtonVisibility(View.VISIBLE);
             return;
         }
