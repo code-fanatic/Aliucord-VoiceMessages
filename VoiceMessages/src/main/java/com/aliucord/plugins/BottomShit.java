@@ -14,7 +14,6 @@ import java.util.Arrays;
 import java.util.List;
 
 public class BottomShit extends BottomSheet {
-
     SettingsAPI settings;
 
     public BottomShit(SettingsAPI settings) {
@@ -28,7 +27,7 @@ public class BottomShit extends BottomSheet {
         var context = requireContext();
         setPadding(20);
 
-        var highSamplingRate = Utils.createCheckedSetting(context, CheckedSetting.ViewType.CHECK, "Increases sampling rate", "This might fix speed up sound problem");
+        var highSamplingRate = Utils.createCheckedSetting(context, CheckedSetting.ViewType.CHECK, "Increase Sampling Rate", "(Might fix speed up sound issue)");
         highSamplingRate.setChecked(settings.getBool("highSamplingRate", false));
 
         highSamplingRate.setOnCheckedListener(aBoolean -> {
@@ -38,15 +37,13 @@ public class BottomShit extends BottomSheet {
         addView(highSamplingRate);
 
         List<CheckedSetting> radios = Arrays.asList(
-                Utils.createCheckedSetting(context, CheckedSetting.ViewType.RADIO, "High", null),
-                Utils.createCheckedSetting(context, CheckedSetting.ViewType.RADIO, "Normal", null),
-                Utils.createCheckedSetting(context, CheckedSetting.ViewType.RADIO, "Low", null)
+                Utils.createCheckedSetting(context, CheckedSetting.ViewType.RADIO, "High Quality (192 kbps)", null),
+                Utils.createCheckedSetting(context, CheckedSetting.ViewType.RADIO, "Normal Quality (128 kbps)", null),
+                Utils.createCheckedSetting(context, CheckedSetting.ViewType.RADIO, "Low Quality (64 kbps)", null)
         );
 
         RadioManager radioManager = new RadioManager(radios);
-
         var bitDepth = Arrays.asList(192, 128, 64);
-
         var selectedRadio = radios.get(bitDepth.indexOf(settings.getInt("audioQuality", 128)));
 
         selectedRadio.setChecked(true);
@@ -64,6 +61,5 @@ public class BottomShit extends BottomSheet {
 
             addView(radio);
         }
-
     }
 }
