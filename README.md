@@ -1,6 +1,10 @@
-# `Aliucord Voice Messages Plugin Dev`
-- Fixed Voice Messages Plugin
-- Download from here [VoiceMessages](https://github.com/code-fanatic/Aliucord-VoiceMessages/raw/refs/heads/dev-builds/VoiceMessages.zip)
+# `Aliucord Plugins`
+
+### [Voice Messages](https://github.com/code-fanatic/Aliucord-VoiceMessages/raw/refs/heads/builds/VoiceMessages.zip)
+- [Source Code]()
+- [Stable Version]()
+- [Dev Version]()
 
 ## Workflow Status
-[![Build](https://github.com/code-fanatic/Aliucord-VoiceMessages/actions/workflows/build.yml/badge.svg)](https://github.com/code-fanatic/Aliucord-VoiceMessages/actions/workflows/dev-build.yml)
+[![Build](https://github.com/code-fanatic/Aliucord-VoiceMessages/actions/workflows/build.yml/badge.svg)](https://github.com/code-fanatic/Aliucord-VoiceMessages/actions/workflows/build.yml)
+[![Dev-Build](https://github.com/code-fanatic/Aliucord-VoiceMessages/actions/workflows/build.yml/badge.svg)](https://github.com/code-fanatic/Aliucord-VoiceMessages/actions/workflows/dev-build.yml)
