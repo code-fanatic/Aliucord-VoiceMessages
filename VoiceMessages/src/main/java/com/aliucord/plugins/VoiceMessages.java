@@ -149,7 +149,6 @@ public class VoiceMessages extends Plugin {
             viewgroup.addView(recordButton);
             var params = (LinearLayout.LayoutParams) waveFormView.getLayoutParams();
             params.height = DimenUtils.dpToPx(30);
-            params.width = DimenUtils.dpToPx(30);
             params.gravity = Gravity.CENTER;
         });
 

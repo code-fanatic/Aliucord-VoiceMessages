@@ -27,7 +27,7 @@ public class BottomShit extends BottomSheet {
         var context = requireContext();
         setPadding(20);
 
-        var highSamplingRate = Utils.createCheckedSetting(context, CheckedSetting.ViewType.CHECK, "Increase Sampling Rate", "(This might fix speed up sound issue");
+        var highSamplingRate = Utils.createCheckedSetting(context, CheckedSetting.ViewType.CHECK, "Increase Sampling Rate", "(Might fix speed up sound issue)");
         highSamplingRate.setChecked(settings.getBool("highSamplingRate", false));
 
         highSamplingRate.setOnCheckedListener(aBoolean -> {
