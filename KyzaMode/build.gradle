@@ -1,7 +1,0 @@
-version = "1.0.2"
-description = "Forces you to fallow spelling rules."
-aliucord.changelog.set("""
-# 1.0.1
-*Quick fix for url's getting broken.
-
-""")
