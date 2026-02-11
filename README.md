@@ -3,4 +3,4 @@
 - Download from here [VoiceMessages](https://github.com/code-fanatic/Aliucord-VoiceMessages/raw/refs/heads/builds/VoiceMessages.zip)
 
 ## Workflow Status
-[![Build](https://github.com/code-fanatic/Aliucord-VoiceMessages/actions/workflows/build.yml/badge.svg)](https://github.com/code-fanatic/Aliucord-VoiceMessages/actions/workflows/build.yml)
+[![Build](https://github.com/code-fanatic/Aliucord-VoiceMessages/actions/workflows/build.yml/badge.svg)](https://github.com/code-fanatic/Aliucord-VoiceMessages/actions/workflows/build-dev.yml)
